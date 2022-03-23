@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <title>Gym Quest</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <h1>
+                Welcome to Gym Quest! Please login in and join the quest!
+            </h1>
+        </header>
+        <main>
+            {{#unless loggedIn}}
+            <form class="login-form">
+                <div>
+                    <label for="username-login">Username:</label>
+                    <input type="text" id="username-login" />
+                </div>
+                <div>
+                    <label for="password-login">Password:</label>
+                    <input type="password" id="password-login" />
+                </div>
+                <div>
+                    <button type="submit">login</button>
+                </div>  
+            </form>
+
+            <a href="/signup">Don't have an account? Sign up!</a>
+            {{/unless}}
+
+            {{{ body }}}
+        </main>
+        <footer>
+            Thanks for visiting!
+        </footer>
+    </div>
+    {{#unless loggedIn}}
+        <script src="/javascript/login.js"></script>
+    {{/unless}}
+</body>
+
+</html>
