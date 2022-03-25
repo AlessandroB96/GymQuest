@@ -2,8 +2,17 @@
     Arms
 </h1>
 
-{{> post-info post}}
+{{> add-post}}
 
-{{> add-comment }}
-
-{{> comments post.comments}}
+{{#if posts.length}}
+<section>
+    <h2>Your Posts</h2>
+    <ol>
+        {{#each posts as |post|}}
+        <li>
+            {{> post-info post}}
+        </li>
+        {{/each}}
+    </ol>
+</section>
+{{/if}}

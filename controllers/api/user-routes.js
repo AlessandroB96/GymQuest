@@ -1,6 +1,6 @@
 // creating 5 routes that will work with User model to perform CRUD operations 
 const router = require('express').Router();
-const User = require('../../models');
+const {User, Post, Comment} = require('../../models');
 
 router.get('/', (req, res) => {
     //access our User model and run .findAll() method (same as SELECT * FROM users)
@@ -20,26 +20,20 @@ router.get('/:id', (req, res) => {
         where: {
             id: req.params.id
         },
-        // include: [
-        //     {
-        //       model: Post,
-        //       attributes: ['id', 'title', 'post_url', 'created_at']
-        //     },
-        //     {
-        //         model: Comment,
-        //         attributes: ['id', 'comment_text', 'created_at'],
-        //         include: {
-        //           model: Post,
-        //           attributes: ['title']
-        //         }
-        //       },
-        //       {
-        //         model: Post,
-        //         attributes: ['title'],
-        //         through: Vote,
-        //         as: 'voted_posts'
-        //       }
-        //   ]
+        include: [
+            {
+              model: Post,
+              attributes: ['id', 'title', 'post_url', 'created_at']
+            },
+            {
+                model: Comment,
+                attributes: ['id', 'comment_text', 'created_at'],
+                include: {
+                  model: Post,
+                  attributes: ['title']
+                }
+              }
+          ]
     })
     .then(dbUserData => {
         if (!dbUserData) {
@@ -75,5 +69,24 @@ router.post('/', (req, res) => {
     });
 });
 
+//DELETE /api/users/1
+router.delete('/:id', (req, res) => {
+    User.destroy({
+        where: {
+            id: req.params.id
+        }
+    })
+    .then(dbUserData => {
+        if (!dbUserData) {
+            res.status(404).json({ message: 'No user found with this id'});
+            return;
+        }
+        res.json(dbUserData);
+    })
+    .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+    })
+});
 
 module.exports = router;
