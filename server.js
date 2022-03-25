@@ -1,6 +1,7 @@
 const express = require('express');
 const routes = require('./controllers');
 const sequelize = require('./config/connection');
+const seedAll = require('./seeds/index');
 const path = require('path');
 
 const app = express();
