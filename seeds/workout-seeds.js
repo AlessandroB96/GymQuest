@@ -1,26 +1,33 @@
-const { Category } = require('../models');
+const { Workout } = require('../models');
 
-const categoryData = [
+const workoutData = [
   {
-    category_name: 'Arms',
+    workout_name: 'Skullcrushers',
+    muscle_group: 'Triceps',
+    category_id: 1,
   },
   {
-    category_name: 'Legs',
+    workout_name: 'Leg press',
+    muscle_group: 'Quads, calvs',
+    category_id: 5,
   },
   {
-    category_name: 'Chest',
+    workout_name: 'Bicep curls',
+    muscle_group: 'Biceps',
+    category_id: 4,
   },
   {
-    category_name: 'Back',
+    workout_name: 'Seated rows',
+    muscle_group: 'Back',
+    category_id: 3,
   },
   {
-    category_name: 'Cardio',
+    workout_name: 'Cardio',
+    muscle_group: 'Full-body',
+    category_id: 2,
   },
-  {
-    category_name: 'Abdominals'
-  }
 ];
 
-const seedCategories = () => Category.bulkCreate(categoryData);
+const seedWorkouts = () => Workout.bulkCreate(workoutData);
 
-module.exports = seedCategories;
+module.exports = seedWorkouts;
