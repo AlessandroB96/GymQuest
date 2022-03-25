@@ -29,7 +29,8 @@ Comment.init(
         type: DataTypes.INTEGER,
         references: {
             model: 'post',
-            key: 'id'
+            key: 'id',
+            category: 'id'
         }
     }
   },
