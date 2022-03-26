@@ -1,10 +1,7 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-
 //creating fields/columns for the Post model
-//Post model takes in 2 parameters: the Post schema, and configuring the metadata and naming convention 
-
 class Post extends Model {}
 
 Post.init(
@@ -26,7 +23,7 @@ Post.init(
                 isUrl: true
             }
        },
-       user_id: {    //this column determines who posts the news article 
+       user_id: {  
            type: DataTypes.INTEGER,
            references: {
                model: 'user',
