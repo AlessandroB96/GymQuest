@@ -1,13 +1,13 @@
 const router = require('express').Router();
 
 // GET /login
-router.get('/login', (req, res) => {
+router.get('/', (req, res) => {
     if (req.session.loggedIn) {
         res.redirect('/');
         return;
     }
     
-    res.render('login');
+    res.render('homepage');
 });
 
 // GET /signup
