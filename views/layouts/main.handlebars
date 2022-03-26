@@ -20,12 +20,20 @@
             {{#unless loggedIn}}
             {{> login }}
             {{/unless}}
+            
             {{{ body }}}
+
+            {{#if loggedIn}}
+            <button id="logout" class="btn-no-style">logout</button>
+            {{#if loggedIn}}
         </main>
         <footer>
             Thanks for joining the quest!
         </footer>
     </div>
+    {{#if loggedIn}}
+    <script src="/javascript/logout.js"></script>
+    {{/if}}
 </body>
 
 </html>
