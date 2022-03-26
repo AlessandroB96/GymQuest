@@ -1,6 +1,6 @@
 const User = require('./User');
 const Comment = require('./Comment');
-const Post = require('./Post');
+// const Post = require('./Post');
 const Workout = require('./Workout');
 const Category = require('./Category');
 
@@ -9,7 +9,8 @@ Category.hasMany(Workout, {
 });
 
 Workout.belongsTo(Category, {
-    foreignKey: 'category_id'
+    foreignKey: 'category_id',
+    onDelete: 'SET NULL'
 });
 
 User.hasMany(Workout, {
@@ -19,24 +20,30 @@ User.hasMany(Workout, {
 //must make reverse association to complete model link 
 //belongsTo tells the server that a post can only belong to 1 user
 Workout.belongsTo(User, {
-    foreignKey: 'user_id'
+    foreignKey: 'user_id',
+    onDelete: 'SET NULL'
 });
 
 Comment.belongsTo(User, {
-    foreignKey: 'user_id'
+    foreignKey: 'user_id',
+    onDelete: 'SET NULL'
 });
 
 Comment.belongsTo(Workout, {
-    foreignKey: 'post_id'
+    foreignKey: 'workout_id',
+    onDelete: 'SET NULL'
 });
 
 User.hasMany(Comment, {
-    foreignKey: 'user_id'
+    foreignKey: 'user_id',
+    onDelete: 'SET NULL'
 });
 
 Workout.hasMany(Comment, {
-    foreignKey: 'post_id'
+    foreignKey: 'workout_id',
+    onDelete: 'SET NULL'
 });
 
 
-module.exports = { User, Comment, Post, Workout, Category}; 
+// module.exports = { User, Comment, Post, Workout, Category}; 
+module.exports = { User, Comment, Workout, Category}; 

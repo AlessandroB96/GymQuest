@@ -2,10 +2,7 @@
     Welcome {{user.username}}, please select your workout quest!
 </h1>
 <ol>
-    <li><a href="/arms">Arms</a></li>
-    <li><a href="/back">Back</a></li>
-    <li><a href="/legs">Legs</a></li>
-    <li><a href="/cardio">Cardio</a></li>
-    <li><a href="/chest">Chest</a></li>
-    <li><a href="/abdominals">Abdominals</a></li>
+    {{#each categories as |category|}}
+    <li><a href="{{category.category_name}}">{{category.category_name}}</a></li>
+    {{/each}}
 </ol>
