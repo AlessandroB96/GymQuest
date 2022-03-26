@@ -4,13 +4,13 @@
 
 {{> add-post}}
 
-{{#if posts.length}}
+{{#if workouts.length}}
 <section>
-    <h2>Your Posts</h2>
+    <h2>Legs Workouts</h2>
     <ol>
-        {{#each posts as |post|}}
+        {{#each workouts as |workout|}}
         <li>
-            {{> post-info post}}
+            {{> post-info workout}}
         </li>
         {{/each}}
     </ol>
