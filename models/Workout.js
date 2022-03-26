@@ -15,13 +15,20 @@ Workout.init(
             type: DataTypes.STRING,
             allowNull: false
         },
+        workout_url: {
+            type: DataTypes.STRING,
+            allowNull: false,
+            validate: {
+                isURL: true
+            }
+        },
         category_id: {
             type: DataTypes.INTEGER,
             references: {
                 model: 'category',
                 key: 'id'
             }
-        }
+        },
     },
     {
         sequelize,
