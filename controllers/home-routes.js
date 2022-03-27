@@ -13,7 +13,7 @@ router.get('/', (req, res) => {
 // GET /signup
 router.get('/signup', (req, res) => {
     if (req.session.loggedIn) {
-        res.redirect('/');
+        res.redirect('dashboard');
         return;
     }
     
