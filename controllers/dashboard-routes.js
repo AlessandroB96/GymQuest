@@ -19,10 +19,10 @@ router.get('/', (req, res) => {
     });
 });
 
-router.get('/:id', (req, res) => {
+router.get('/:category_name', (req, res) => {
     Category.findOne({
         where: {
-            id: req.params.id
+            category_name: req.params.category_name
         }, 
         attributes: [
             'id',
@@ -55,10 +55,10 @@ router.get('/:id', (req, res) => {
     });
 });
 
-router.get('/workout/:id', (req, res) => {
+router.get('/workout/:workout_name', (req, res) => {
     Workout.findOne({
         where: {
-            id: req.params.id
+            workout_name: req.params.workout_name
         }, 
         attributes: [
             'id',
