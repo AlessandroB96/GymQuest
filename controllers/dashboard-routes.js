@@ -20,29 +20,30 @@ router.get('/', (req, res) => {
 });
 
 router.get('/:id', (req, res) => {
-    Workout.findAll({
+    Category.findOne({
         where: {
-            category_id: 1
+            id: req.params.id
         }, 
         attributes: [
             'id',
-            'workout_name',
-            'workout_url',
+            // 'workout_name',
+            // 'workout_url',
+            'category_name', 
             'created_at'
         ],
             include: [
                 {
-                    model: Category,
-                    attributes: ['id','category_name', 'created_at']
+                    model: Workout,
+                    attributes: ['id','workout_name', 'workout_url', 'created_at']
                 }
             ]
     })
-    .then(dbArmData => {
-        if (dbArmData) {
-            const workouts = dbArmData.map(arm => arm.get({ plain: true }));
+    .then(dbCategoryData => {
+        if (dbCategoryData) {
+            const category = dbCategoryData.get({ plain: true });
 
             res.render('arms', {
-                workouts,
+                category,
                 loggedIn: true
             });
         } else {
