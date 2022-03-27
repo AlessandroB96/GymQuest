@@ -20,14 +20,51 @@ router.get('/', (req, res) => {
 });
 
 router.get('/:id', (req, res) => {
-    Workout.findAll({
+    Category.findOne({
         where: {
-            category_id: 1
+            id: req.params.id
+        }, 
+        attributes: [
+            'id',
+            // 'workout_name',
+            // 'workout_url',
+            'category_name', 
+            'created_at'
+        ],
+            include: [
+                {
+                    model: Workout,
+                    attributes: ['id','workout_name', 'workout_url', 'created_at']
+                }
+            ]
+    })
+    .then(dbCategoryData => {
+        if (dbCategoryData) {
+            const category = dbCategoryData.get({ plain: true });
+
+            res.render('category', {
+                category,
+                loggedIn: true
+            });
+        } else {
+            res.status(404).end();
+        }
+    })
+    .catch(err => {
+        res.status(500).json(err);
+    });
+});
+
+router.get('/workout/:id', (req, res) => {
+    Workout.findOne({
+        where: {
+            id: req.params.id
         }, 
         attributes: [
             'id',
             'workout_name',
             'workout_url',
+            // 'category_name', 
             'created_at'
         ],
             include: [
@@ -37,12 +74,12 @@ router.get('/:id', (req, res) => {
                 }
             ]
     })
-    .then(dbArmData => {
-        if (dbArmData) {
-            const workouts = dbArmData.map(arm => arm.get({ plain: true }));
+    .then(dbWorkoutData => {
+        if (dbWorkoutData) {
+            const workout = dbWorkoutData.get({ plain: true });
 
-            res.render('arms', {
-                workouts,
+            res.render('single-post', {
+                workout,
                 loggedIn: true
             });
         } else {
