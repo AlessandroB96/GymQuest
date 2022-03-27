@@ -42,7 +42,7 @@ router.get('/:id', (req, res) => {
         if (dbCategoryData) {
             const category = dbCategoryData.get({ plain: true });
 
-            res.render('arms', {
+            res.render('category', {
                 category,
                 loggedIn: true
             });
@@ -78,7 +78,7 @@ router.get('/workout/:id', (req, res) => {
         if (dbWorkoutData) {
             const workout = dbWorkoutData.get({ plain: true });
 
-            res.render('arms-single-post', {
+            res.render('single-post', {
                 workout,
                 loggedIn: true
             });
