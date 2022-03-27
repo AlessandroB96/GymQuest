@@ -3,6 +3,10 @@ const fns = require('date-fns')
 module.exports = {
     format_date: date => {
         return `${fns.format(new Date(date), 'MM/dd/yyyy')}`;
+    // format_date: date => {
+    //     return `${new Date(date).getMonth() + 1}/${new Date(date).getDate()}/${new Date(
+    //         date
+    //     ).getFullYear()}`;
     },
     format_url: url => {
         return url
