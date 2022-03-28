@@ -7,6 +7,9 @@ top: 0px;
 background: #5895AF;
 background-image: url("../assets/runningman.svg");
 background-repeat: no-repeat;
+background-size: 550px;
+background-position: left;
+background-position-y: 50px;
 }
 
 .logo {
