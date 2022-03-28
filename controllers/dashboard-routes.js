@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Category, Workout } = require('../models');
+const { Category, Workout, Comment, User } = require('../models');
 
 router.get('/', (req, res) => {
     Category.findAll({
@@ -64,13 +64,21 @@ router.get('/workout/:workout_name', (req, res) => {
             'id',
             'workout_name',
             'workout_url',
-            // 'category_name', 
+            //'category_name', 
             'created_at'
         ],
             include: [
                 {
                     model: Category,
                     attributes: ['id','category_name', 'created_at']
+                },
+                {
+                    model: Comment,
+                    attributes: ['id', 'comment_text', 'user_id', 'workout_id', 'created_at'],
+                    include: {
+                        model: User,
+                        attributes: ['username']
+                    }
                 }
             ]
     })
