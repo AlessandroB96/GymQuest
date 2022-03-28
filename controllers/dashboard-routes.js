@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const { Category, Workout, Comment, User } = require('../models');
+const withAuth = require('../utils/auth');
 
 router.get('/', (req, res) => {
     Category.findAll({
@@ -55,7 +56,7 @@ router.get('/:category_name', (req, res) => {
     });
 });
 
-router.get('/workout/:workout_name', (req, res) => {
+router.get('/workout/:workout_name', withAuth, (req, res) => {
     Workout.findOne({
         where: {
             workout_name: req.params.workout_name
