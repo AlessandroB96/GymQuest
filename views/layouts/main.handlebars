@@ -6,25 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="/stylesheets/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <title>Gym Quest</title>
 </head>
 
 <body>
     <div class="wrapper">
         <header>
-            <h1>
+            <h1 class="logo">
                 Gym Quest
             </h1>
         </header>
-        <main>               
-        {{{ body }}}
-        {{#if loggedIn}}
-            <button id="logout" class="btn-no-style">logout</button>
+        <main>           
+            {{{ body }}}
+            {{#if loggedIn}}
+            <button id="logout" class="btn-no-style">Logout</button>
         </main>
-        <footer>
+        <footer class="signup-footer">
             Thanks for joining the quest!
         </footer>
-        {{/if}} 
+        {{/if}}
     </div>
     {{#if loggedIn}}
     <script src="/javascript/logout.js"></script>

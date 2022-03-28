@@ -1,0 +1,205 @@
+body, html {
+position: absolute;
+width: 941px;
+height: 490px;
+left: 0px;
+top: 0px;
+background: #5895AF;
+background-image: url("../assets/runningman.svg");
+background-repeat: no-repeat;
+background-size: 550px;
+background-position: left;
+background-position-y: 50px;
+}
+
+.logo {
+position: absolute;
+width: 400px;
+height: 84px;
+left: 640px;
+top: 100px;
+font-family: 'Pacifico', cursive;
+font-style: normal;
+font-weight: 400;
+font-size: 48px;
+line-height: 84px;
+letter-spacing: -0.015em;
+color: #324144;
+} 
+
+.login-form, .signup-form {
+position: absolute;
+width: 308px;
+height: 296px;
+left: 600px;
+top: 250px;
+background: #B3CFE9;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 9px;
+}
+
+#username-login {
+position: absolute;
+width: 273px;
+height: 37px;
+top: 40px;
+left: 17px;
+background: #FFFFFF;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+#username-signup {
+position: absolute;
+width: 273px;
+height: 37px;
+left: 17px;
+top: 40px;
+background: #FFFFFF;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.usertext1 {
+position: absolute;
+left: 20px;
+top: 15px;
+}
+
+.usertext2{
+position: absolute;
+top: 15px;
+left: 20px;
+}
+
+#password-login {
+position: absolute;
+width: 273px;
+height: 37px;
+top: 105px;
+left: 16px;
+background: #FFFFFF;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.passwordtext1 {
+position: absolute;
+top: 80px;
+left: 20px;
+}
+
+.passwordtext2 {
+position: absolute;
+top: 145px;
+left: 20px;
+}
+
+#password-signup {
+position: absolute;
+width: 273px;
+height: 37px;
+left: 17px;
+top: 170px;
+background: #FFFFFF;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+#email-signup {
+position: absolute;
+width: 273px;
+height: 37px;
+left: 16px;
+top: 105px;
+background: #FFFFFF;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.emailtext {
+position: absolute;
+top: 80px;
+left: 20px;
+}
+
+a {
+position: absolute;
+width: 112px;
+height: 38px;
+left: 690px;
+top: 490px;
+font-family: 'Palanquin';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 24px;
+display: flex;
+align-items: center;
+text-align: center;
+letter-spacing: -0.015em;
+color: #000000;
+}
+
+#login-link {
+position: absolute;
+top: 12px;
+left: 5px;
+}
+
+.loginbtn {
+position: absolute;
+width: 111px;
+height: 37px;
+left: 95px;
+top: 160px;
+background: #FF6C75;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.submitbtn {
+position: absolute;
+width: 111px;
+height: 37px;
+left: 95px;
+top: 215px;
+background: #FF6C75;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+#logout {
+position: absolute;
+width: 111px;
+height: 37px;
+left: 770px;
+top: 490px;
+background: #FF6C75;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.div {
+position: absolute;
+width: 112px;
+height: 24px;
+left: 333px;
+top: 197px;
+font-family: 'Palanquin';
+font-style: normal;
+font-weight: 400;
+font-size: 13px;
+line-height: 24px;
+/* identical to box height */
+display: flex;
+align-items: center;
+letter-spacing: -0.015em;
+color: #000000;
+}
+
+footer {
+display: flex;
+justify-content: center;
+margin-top: 500px;
+margin-left: 555px;
+}
+
+.signup-footer {
+display: flex;
+justify-content: center;
+margin-top: 556px;
+margin-left: 555px;
+}
