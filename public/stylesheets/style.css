@@ -11,7 +11,7 @@ background: #5895AF;
 position: absolute;
 width: 212px;
 height: 84px;
-left: 700px;
+left: 690px;
 top: 18px;
 font-family: 'Pacifico', cursive;
 font-style: normal;
@@ -22,7 +22,7 @@ letter-spacing: -0.015em;
 color: #324144;
 } 
 
-.login-form {
+.login-form, .signup-form {
 position: absolute;
 width: 308px;
 height: 296px;
@@ -43,10 +43,26 @@ background: #FFFFFF;
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-.usertext {
+#username-signup {
+position: absolute;
+width: 273px;
+height: 37px;
+left: 17px;
+top: 40px;
+background: #FFFFFF;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.usertext1 {
 position: absolute;
 left: 20px;
 top: 15px;
+}
+
+.usertext2{
+position: absolute;
+top: 15px;
+left: 20px;
 }
 
 #password-login {
@@ -59,7 +75,39 @@ background: #FFFFFF;
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-.passwordtext {
+.passwordtext1 {
+position: absolute;
+top: 80px;
+left: 20px;
+}
+
+.passwordtext2 {
+position: absolute;
+top: 145px;
+left: 20px;
+}
+
+#password-signup {
+position: absolute;
+width: 273px;
+height: 37px;
+left: 17px;
+top: 170px;
+background: #FFFFFF;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+#email-signup {
+position: absolute;
+width: 273px;
+height: 37px;
+left: 16px;
+top: 105px;
+background: #FFFFFF;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.emailtext {
 position: absolute;
 top: 80px;
 left: 20px;
@@ -93,6 +141,16 @@ background: #FF6C75;
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
+.submitbtn {
+position: absolute;
+width: 111px;
+height: 37px;
+left: 95px;
+top: 220px;
+background: #FF6C75;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
 #logout {
 position: absolute;
 width: 111px;
@@ -119,4 +177,11 @@ display: flex;
 align-items: center;
 letter-spacing: -0.015em;
 color: #000000;
+}
+
+footer {
+display: flex;
+justify-content: center;
+margin-top: 500px;
+margin-left: 555px;
 }
