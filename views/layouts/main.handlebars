@@ -17,21 +17,23 @@
                 Gym Quest
             </h1>
         </header>
+
         <main>
                         
             {{{ body }}}
 
-            {{!-- {{#if loggedIn}} --}}
+            {{#if loggedIn}}
             <button id="logout" class="btn-no-style">Logout</button>
-            {{!-- {{#if loggedIn}} --}}
+            
         </main>
-        <footer>
+        <footer class="signup-footer">
             Thanks for joining the quest!
         </footer>
+        {{/if}}
     </div>
-    {{!-- {{#if loggedIn}} --}}
+    {{#if loggedIn}}
     <script src="/javascript/logout.js"></script>
-    {{!-- {{/if}} --}}
+    {{/if}}
 </body>
 
 </html>
