@@ -6,7 +6,7 @@ const withAuth = require('../../utils/auth');
 router.get('/', (req, res) => {
     //access our User model and run .findAll() method (same as SELECT * FROM users)
     User.findAll({
-        // attributes: { exclude: ['password']}
+        attributes: { exclude: ['password']}
     })
     .then(dbUserData => res.json(dbUserData))
     .catch(err => {
@@ -89,6 +89,39 @@ router.delete('/:id', (req, res) => {
         console.log(err);
         res.status(500).json(err);
     })
+});
+
+// POST /api/users/login
+router.post('/login', (req, res) => {
+    User.findOne({
+        where: {
+            username: req.body.username
+        }
+    }).then(dbUserData => {
+        if (!dbUserData) {
+            res.status(400).json({ message: 'No user with that username!' });
+            return;
+        }
+    
+        // Verify user from password
+        const validPassword = dbUserData.checkPassword(req.body.password);
+
+        console.log(validPassword);
+        console.log(req.body.password);
+        
+        if (!validPassword) {
+            res.status(400).json({ message: 'Incorrect password!' });
+            return;
+        }
+        req.session.save(() => {
+            // declare session variables
+            req.session.user_id = dbUserData.id;
+            req.session.username = dbUserData.username;
+            req.session.loggedIn = true;
+            
+        res.json({ user: dbUserData, message: 'You are now logged in!' });
+        });    
+    });  
 });
 
 // POST /api/users/logout
