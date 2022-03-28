@@ -6,6 +6,6 @@
     <div class="meta">
         Posted by {{user.username}} on {{format_date created_at}}
 
-        {{comments.length}} {{format_plural "comment" comments.length}}
+        <a href="/dashboard/workout/{{workout_name}}">{{comments.length}} {{format_plural "comment" comments.length}}</a>
     </div>
 </article>
