@@ -7,27 +7,70 @@ top: 0px;
 background: #5895AF;
 }
 
+.logo {
+position: absolute;
+width: 212px;
+height: 84px;
+left: 700px;
+top: 18px;
+font-family: 'Pacifico';
+font-style: normal;
+font-weight: 400;
+font-size: 48px;
+line-height: 84px;
+letter-spacing: -0.015em;
+color: #324144;
+} 
+
 .login-form {
 position: absolute;
 width: 308px;
 height: 296px;
-left: 317px;
-top: 200px;
+left: 600px;
+top: 250px;
 background: #B3CFE9;
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 border-radius: 9px;
+}
+
+#username-login {
+position: absolute;
+width: 273px;
+height: 37px;
+top: 40px;
+left: 17px;
+}
+
+.usertext {
+position: absolute;
+left: 20px;
+top: 15px;
+}
+
+#password-login {
+position: absolute;
+width: 273px;
+height: 37px;
+top: 105px;
+left: 17px;
+}
+
+.passwordtext {
+position: absolute;
+top: 80px;
+left: 20px;
 }
 
 a {
 position: absolute;
 width: 112px;
 height: 38px;
-left: 333px;
-top: 421px;
+left: 630px;
+top: 490px;
 font-family: 'Palanquin';
 font-style: normal;
 font-weight: 400;
-font-size: 13px;
+font-size: 14px;
 line-height: 24px;
 display: flex;
 align-items: center;
@@ -36,12 +79,22 @@ letter-spacing: -0.015em;
 color: #000000;
 }
 
+.loginbtn {
+position: absolute;
+width: 111px;
+height: 37px;
+left: 95px;
+top: 150px;
+background: #FF6C75;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
 #logout {
 position: absolute;
 width: 111px;
 height: 37px;
-right: 333px;
-top: 421px;
+left: 770px;
+top: 490px;
 background: #FF6C75;
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
@@ -52,7 +105,6 @@ width: 112px;
 height: 24px;
 left: 333px;
 top: 197px;
-
 font-family: 'Palanquin';
 font-style: normal;
 font-weight: 400;
