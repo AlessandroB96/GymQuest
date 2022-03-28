@@ -23,7 +23,7 @@ router.post('/', withAuth, (req, res) => {
     if (req.session) {
         Comment.create({ 
             comment_text: req.body.comment_text,
-            workout_id: req.session.workout_id,
+            workout_id: req.body.workout_id,
             // use the id from the session
             user_id: req.session.user_id
         })
