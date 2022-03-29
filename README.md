@@ -37,6 +37,6 @@
   GitHub: https://github.com/AlessandroB96/GymQuest, AlessandroB96, ajmarrocco, GeneHackerman
 
   ## Credits
-  Rafael Arias, Alessandro Belag, Anthony Marrocco, Francisco Alegria
+  Rafael Arias, Alessandro Belaj, Anthony Marrocco, Francisco Alegria
   
   
