@@ -1,11 +1,13 @@
 <article class="post">
     <div class="title">
-        <a href="/dashboard/workout/{{workout_name}}"><h1>{{workout_name}}</h1></a>
+        <a href="/dashboard/workout/{{workout_name}}">
+            <h1>{{workout_name}}</h1>
+        </a>
         <a href="{{workout_url}}" target="_blank"><span>({{format_url workout_url}})</span></a>
     </div>
     <div class="meta">
-        Posted by {{user.username}} on {{format_date created_at}}
+        {{!-- Posted by {{user.username}} on {{format_date created_at}} --}}
 
-        <a href="/dashboard/workout/{{workout_name}}">{{comments.length}} {{format_plural "comment" comments.length}}</a>
+        {{!-- <a href="/dashboard/workout/{{workout_name}}">{{comments.length}} {{format_plural "comment" comments.length}}</a> --}}
     </div>
 </article>

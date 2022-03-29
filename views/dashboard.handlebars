@@ -5,10 +5,10 @@
 
 <div class="category-container">
     <div class="categories">
-            {{#each categories as |category|}}
-                <button type="submit" class="category-btn">
-                    <a class="each-category" href="/dashboard/{{category.category_name}}">{{category.category_name}}</a>
-                </button>
-            {{/each}}
+        {{#each categories as |category|}}
+            <a class="each-category" href="/dashboard/{{category.category_name}}">
+                <button type="submit" class="category-btn">{{category.category_name}}</button>
+            </a>   
+        {{/each}}
     </div>
 </div>

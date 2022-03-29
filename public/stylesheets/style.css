@@ -24,7 +24,8 @@ body, html {
     letter-spacing: -0.015em;
     color: #324144;
     text-shadow: 1px 2px #FF6C75;
-} 
+    
+}
 
 .login-form {
     position: relative;
@@ -102,16 +103,20 @@ body, html {
     border: none;
     margin-top: 15px;
     border-radius: 5px;
+}
+
+#logout:hover, .addcomment-btn:hover {
+    background: #ff6c76a4;
+    color: white;
 } 
 
 .signup-footer {
-display: relative;
-align-items: center;
-font-family: 'IBM Plex Sans Arabic', sans-serif;
-font-size: 20px;
-font-weight: bold;
-margin-top: 50px;
-
+    display: relative;
+    align-items: center;
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 50px;
 }
 
 .welcome {
@@ -178,7 +183,122 @@ margin-top: 50px;
     border-radius: 5px;
 }
 
-.each-category:hover {
-    text-decoration: none;
+.category-btn:hover {
+    background: #ff6c768c;
     color: white;
+}
+
+.comment-border {
+    display: flex;
+    margin-top: 50px;
+    align-items: center;
+    border-radius: 10px;
+    
+}
+
+.info-container {
+    flex:40%;
+    margin-left:40px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+}
+
+.emptydiv {
+    flex: 5%
+}
+
+.comment-container {
+    flex: 40%;
+    margin-right: 35px;
+
+}
+
+.inner-info {
+    background: #B3CFE9;
+    border-radius: 10px;
+    padding: 20px;
+
+}
+
+.inner-container {
+    background: #B3CFE9;
+    border-radius: 10px;
+    width: 100%;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    padding: 20px;
+    height: 620px;
+    overflow-y: auto;
+}
+
+.comment {
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
+    line-height: 1.6;
+    text-align: left;
+    padding: 5px;
+}
+
+.comment:nth-child(odd) {
+    background-color: #9cb4cabc;
+    border-radius: 5px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.addcomment-btn {
+    position: relative;
+    align-items: center;
+    width: 200px;
+    height: 37px;
+    background: #FF6C75;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+}
+
+.comment-input {
+    background: white;
+    resize: none;
+    border: none;
+    border-radius: 5px;
+    height: 90px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin-top: 280px;
+    margin-bottom: 10px;
+}
+
+.user {
+    font-size: 22px;
+    font-weight: bolder;
+}
+
+.text {
+    font-size: 18px;
+}
+
+/*MEDIA QUERIES*/
+
+@media screen and (max-width: 700px) {
+   
+    .comment-border {
+        display: flex;
+        flex-direction: column;  
+    }
+
+    .info-container {
+        margin: auto auto 40px auto;
+    }
+
+    .comment-container {
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+    }
+
+    .inner-container {
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+    }
 }
