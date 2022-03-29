@@ -32,7 +32,7 @@
 
   ## Questions
   Have questions about this projet?
-  GitHub: https://github.com/GeneHackerman, AlessandroB96, ajmarrocco
+  GitHub: https://github.com/AlessandroB96/GymQuest, AlessandroB96, ajmarrocco, GeneHackerman
 
   ## Credits
   Rafael Arias, Alessandro Belag, Anthony Marrocco, Francisco Alegria
