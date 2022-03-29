@@ -1,205 +1,184 @@
 body, html {
-position: absolute;
-width: 941px;
-height: 490px;
-left: 0px;
-top: 0px;
-background: #5895AF;
-background-image: url("../assets/runningman.svg");
-background-repeat: no-repeat;
-background-size: 550px;
-background-position: left;
-background-position-y: 50px;
+    position: relative;
+    text-align: center;
+    background: #5895AF;
+    background-image: url("../assets/runningman.svg");
+    background-repeat: no-repeat;
+    background-size: 550px;
+    background-position: left;
+    background-position-y: 50px;
+}
+.wrapper {
+    position: relative;
+    text-align: center;
+    padding-top: 20px;
 }
 
 .logo {
-position: absolute;
-width: 400px;
-height: 84px;
-left: 640px;
-top: 100px;
-font-family: 'Pacifico', cursive;
-font-style: normal;
-font-weight: 400;
-font-size: 48px;
-line-height: 84px;
-letter-spacing: -0.015em;
-color: #324144;
+    position: relative;
+    font-family: 'Pacifico', cursive;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 84px;
+    letter-spacing: -0.015em;
+    color: #324144;
+    text-shadow: 1px 2px #FF6C75;
 } 
 
-.login-form, .signup-form {
-position: absolute;
-width: 308px;
-height: 296px;
-left: 600px;
-top: 250px;
-background: #B3CFE9;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-border-radius: 9px;
+.login-form {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 40px auto auto auto;
+    width: 308px;
+    height: 296px;
+    background: #B3CFE9;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 9px;
 }
 
-#username-login {
-position: absolute;
-width: 273px;
-height: 37px;
-top: 40px;
-left: 17px;
-background: #FFFFFF;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+.signup-form {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 40px auto auto auto;
+    width: 308px;
+    height: 360px;
+    background: #B3CFE9;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 9px; 
 }
 
-#username-signup {
-position: absolute;
-width: 273px;
-height: 37px;
-left: 17px;
-top: 40px;
-background: #FFFFFF;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+#username-login, #password-login, #username-signup, #email-signup, #password-signup {
+    position: relative;
+    align-items: center;
+    width: 273px;
+    height: 37px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border: none;
 }
 
-.usertext1 {
-position: absolute;
-left: 20px;
-top: 15px;
+.usertext1, .usertext2, .passwordtext1, .passwordtext2, .emailtext {
+    display: flex;
+    align-items: flex-start;
+    padding-left: 16px;
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
 }
 
-.usertext2{
-position: absolute;
-top: 15px;
-left: 20px;
+.loginbtn, .submitbtn {
+    position: relative;
+    align-items: center;
+    width: 111px;
+    height: 37px;
+    background: #FF6C75;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
 }
 
-#password-login {
-position: absolute;
-width: 273px;
-height: 37px;
-top: 105px;
-left: 16px;
-background: #FFFFFF;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+.loginbtn:hover {
+    color: white;
 }
-
-.passwordtext1 {
-position: absolute;
-top: 80px;
-left: 20px;
-}
-
-.passwordtext2 {
-position: absolute;
-top: 145px;
-left: 20px;
-}
-
-#password-signup {
-position: absolute;
-width: 273px;
-height: 37px;
-left: 17px;
-top: 170px;
-background: #FFFFFF;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
-#email-signup {
-position: absolute;
-width: 273px;
-height: 37px;
-left: 16px;
-top: 105px;
-background: #FFFFFF;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
-.emailtext {
-position: absolute;
-top: 80px;
-left: 20px;
-}
-
-a {
-position: absolute;
-width: 112px;
-height: 38px;
-left: 690px;
-top: 490px;
-font-family: 'Palanquin';
-font-style: normal;
-font-weight: 400;
-font-size: 14px;
-line-height: 24px;
-display: flex;
-align-items: center;
-text-align: center;
-letter-spacing: -0.015em;
-color: #000000;
-}
-
-#login-link {
-position: absolute;
-top: 12px;
-left: 5px;
-}
-
-.loginbtn {
-position: absolute;
-width: 111px;
-height: 37px;
-left: 95px;
-top: 160px;
-background: #FF6C75;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
-.submitbtn {
-position: absolute;
-width: 111px;
-height: 37px;
-left: 95px;
-top: 215px;
-background: #FF6C75;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+.btn-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 15px;
 }
 
 #logout {
-position: absolute;
-width: 111px;
-height: 37px;
-left: 770px;
-top: 490px;
-background: #FF6C75;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
-.div {
-position: absolute;
-width: 112px;
-height: 24px;
-left: 333px;
-top: 197px;
-font-family: 'Palanquin';
-font-style: normal;
-font-weight: 400;
-font-size: 13px;
-line-height: 24px;
-/* identical to box height */
-display: flex;
-align-items: center;
-letter-spacing: -0.015em;
-color: #000000;
-}
-
-footer {
-display: flex;
-justify-content: center;
-margin-top: 500px;
-margin-left: 555px;
-}
+    width: 111px;
+    height: 37px;
+    background: #FF6C75;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border: none;
+    margin-top: 15px;
+    border-radius: 5px;
+} 
 
 .signup-footer {
-display: flex;
-justify-content: center;
-margin-top: 556px;
-margin-left: 555px;
+display: relative;
+align-items: center;
+font-family: 'IBM Plex Sans Arabic', sans-serif;
+font-size: 20px;
+font-weight: bold;
+margin-top: 50px;
+
+}
+
+.welcome {
+    display: flex;
+    justify-content: center;
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
+    font-size: 25px;
+    margin-top: 60px;
+    font-weight: bold;
+}
+
+.signup, a {
+    position: relative;
+    text-align: center;
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
+    text-decoration: none;
+    font-size: 17px;
+    color: black;
+}
+
+.signup:hover {
+    font-weight: bolder;
+    text-decoration: none;
+    color: red;
+}
+
+.instruct {
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
+    font-size: 25px;
+    margin: 40px auto 40px auto;
+    font-weight: bold;
+}
+
+.category-container {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    background: #B3CFE9;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 9px;
+    width: 308px;
+    height: 400px;
+}
+
+.categories {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.category-btn {
+    position: relative;
+    align-items: center;
+    width: 275px;
+    height: 37px;
+    background: #FF6C75;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+}
+
+.each-category:hover {
+    text-decoration: none;
+    color: white;
 }

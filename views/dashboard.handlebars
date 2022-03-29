@@ -1,8 +1,14 @@
-<h1>
-    Welcome {{user.username}}, please select your workout quest!
-</h1>
-<ol>
-    {{#each categories as |category|}}
-    <li><a href="/dashboard/{{category.category_name}}">{{category.category_name}}</a></li>
-    {{/each}}
-</ol>
+
+    <h1 class="instruct">
+        Welcome {{user.username}}, please select your workout!
+    </h1>
+
+<div class="category-container">
+    <div class="categories">
+            {{#each categories as |category|}}
+                <button type="submit" class="category-btn">
+                    <a class="each-category" href="/dashboard/{{category.category_name}}">{{category.category_name}}</a>
+                </button>
+            {{/each}}
+    </div>
+</div>
