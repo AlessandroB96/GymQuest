@@ -7,10 +7,17 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="/stylesheets/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@200&display=swap" rel="stylesheet">
     <title>Gym Quest</title>
 </head>
 
 <body>
+
+    {{#if loggedIn}}
+    <div class="btn-container">
+            <button id="logout" class="btn-no-style">LOGOUT</button>
+        </div>
+    {{/if}}
     <div class="wrapper">
         <header>
             <h1 class="logo">
@@ -19,9 +26,8 @@
         </header>
         <main>           
             {{{ body }}}
-            {{#if loggedIn}}
-            <button id="logout" class="btn-no-style">Logout</button>
         </main>
+        {{#if loggedIn}}
         <footer class="signup-footer">
             Thanks for joining the quest!
         </footer>
