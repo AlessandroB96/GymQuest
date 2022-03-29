@@ -19,7 +19,7 @@
   Clone the repository to your local machine and then install the following packages: express-handlebars, MySQL2, Sequelize, dotenv package, bcrypt package(this will hash the passwords), express-session connect-session-sequelize(this adds authentication). Source the schema.sql file via MySQL on the command line, then npm run seed, npm start(to run the server to port 3001), then open localhost:3001 in your browser. 
 
   ## Usage
-  Fairly simple workout website with a signup/login form as well as workout categories. User can navigate through the categories and post comments to any user posts. 
+  Fairly simple workout website with a signup/login form as well as workout categories. User can navigate through the categories and post comments to said categories. 
 
   ## Licenses
     This project is covered under the MIT license. To learn more about what this means, click the license button at the top.
