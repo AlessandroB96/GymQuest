@@ -35,7 +35,7 @@ router.get('/:category_name', (req, res) => {
             include: [
                 {
                     model: Workout,
-                    attributes: ['id','workout_name', 'workout_url', 'created_at']
+                    attributes: ['id','workout_name', 'workout_image', 'workout_url', 'created_at']
                 }
             ]
     })
@@ -64,6 +64,7 @@ router.get('/workout/:workout_name', withAuth, (req, res) => {
         attributes: [
             'id',
             'workout_name',
+            'workout_image',
             'workout_url',
             //'category_name', 
             'created_at'
