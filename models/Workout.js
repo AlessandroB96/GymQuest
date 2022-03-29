@@ -15,6 +15,10 @@ Workout.init(
             type: DataTypes.STRING,
             allowNull: false
         },
+        workout_image: {
+            type: DataTypes.STRING,
+            allowNull: false
+        },
         workout_url: {
             type: DataTypes.STRING,
             allowNull: false,

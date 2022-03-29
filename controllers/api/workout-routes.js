@@ -7,6 +7,7 @@ router.get('/workouts', (req, res) => {
         attributes: [
         'id',
         'workout_name',
+        'workout_image',
         'workout_url'
     ],
         include: [
@@ -31,6 +32,7 @@ router.get('/workouts/:workout_name', (req, res) => {
         attributes: [
         'id',
         'workout_name',
+        'workout_image',
         'workout_url'
     ],
         include: [

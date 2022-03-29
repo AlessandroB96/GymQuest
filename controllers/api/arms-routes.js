@@ -10,6 +10,7 @@ router.get('/arms', (req, res) => {
         attributes: [
         'id',
         'workout_name',
+        'workout_image',
         'workout_url'
     ],
         include: [
