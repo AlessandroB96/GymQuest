@@ -40,6 +40,18 @@ body, html {
     border-radius: 9px;
 }
 
+.login {
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
+    font-size: 20px;
+    font-weight: bolder; 
+}
+
+.login:hover {
+    text-decoration: none;
+    color: #FF6C75;
+    
+}
+
 .signup-form {
     position: relative;
     display: flex;
@@ -133,14 +145,15 @@ body, html {
     text-align: center;
     font-family: 'IBM Plex Sans Arabic', sans-serif;
     text-decoration: none;
-    font-size: 17px;
+    font-size: 18px;
+    font-weight: bolder;
     color: black;
 }
 
 .signup:hover {
     font-weight: bolder;
     text-decoration: none;
-    color: red;
+    color: #FF6C75;
 }
 
 .instruct {
@@ -246,7 +259,7 @@ body, html {
 .addcomment-btn {
     position: relative;
     align-items: center;
-    width: 200px;
+    width: 300px;
     height: 37px;
     background: #FF6C75;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -263,8 +276,9 @@ body, html {
     border: none;
     border-radius: 5px;
     height: 90px;
+    width: 300px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    margin-top: 280px;
+    margin-top: 20px;
     margin-bottom: 10px;
 }
 
@@ -275,6 +289,59 @@ body, html {
 
 .text {
     font-size: 18px;
+}
+
+.img {
+    border-radius: 5px;
+    max-width: 220px;
+    max-height: 230px;
+    min-height: 200px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.rows {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: auto 200px auto 200px;
+}
+
+.column {
+    padding: 0 10px;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 40px;
+    background-color: #B3CFE9;
+    border: 2px solid #FF6C75;
+    border-radius: 20px;
+    width: 350px;
+    height: 350px;
+    align-items: center;
+    margin-bottom: 20px;
+
+}
+
+
+.workout-link:hover {
+    text-decoration: none;
+}
+
+.workout-title {
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
+    font-weight: bolder;
+    font-size: 25px;
+}
+
+.category-name {
+    font-size: 60px;
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
+    font-weight: bolder;
+    margin-top: 35px;
 }
 
 /*MEDIA QUERIES*/
