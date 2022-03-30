@@ -1,17 +1,15 @@
 # GymQuest
   
-  
-
   ## Table of Contents
   * [Description](#description)
   * [Installation](#installation)
   * [Usage](#usage)
   * [Contributing](#contributing)
   * [Images](#images)
+  * [Video](#video)
   * [Questions](#questions)
   * [Credits](#credits)
 
-  
   ## Description
   A fitness app created for those looking to start or add to their workout routines. Users are allowed to signup and login to use the site features such as workout categories, which are categorized by muscle group with a multitude of workouts available for each group. Users are also encouraged to comment on each workout. 
   
@@ -27,8 +25,6 @@
   ## Contributing
   Others can contribute by simply emailing any of the key contributors to the project and putting up any issues to the repo. 
 
-
-
   ## Images 
   ![alt text](READMe_Images/landingpage.jpeg)
 
@@ -38,11 +34,20 @@
   
   ![alt text](READMe_Images/commentpage.jpeg)
 
+  ## Video
+
+  https://drive.google.com/file/d/1fXD2N_DqxIUKsOTJrAsKrqB3e-l8iqlJ/view?usp=sharing
+
   ## Questions
-  Have questions about this projet?
-  GitHub: https://github.com/AlessandroB96/GymQuest, AlessandroB96, ajmarrocco, GeneHackerman
+  Have questions about this project?  
+  GitHub: https://github.com/AlessandroB96/GymQuest 
+
+  Members Github accounts:
+  * Rafael Arias https://github.com/GeneHackerman 
+  * Alessandro Belaj https://github.com/AlessandroB96/GymQuest 
+  * Anthony Marrocco https://github.com/ajmarrocco
+  * Francisco Alegria https://github.com/mralegria31
 
   ## Credits
-  Rafael Arias, Alessandro Belaj, Anthony Marrocco, Francisco Alegria
-  
+  Rafael Arias, Alessandro Belaj, Anthony Marrocco, and Francisco Alegria
   
