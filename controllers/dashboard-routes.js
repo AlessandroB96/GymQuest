@@ -2,7 +2,7 @@ const router = require('express').Router();
 const { Category, Workout, Comment, User } = require('../models');
 const withAuth = require('../utils/auth');
 
-router.get('/', (req, res) => {
+router.get('/', withAuth, (req, res) => {
     Category.findAll({
         attributes: [
         'id',
@@ -20,7 +20,7 @@ router.get('/', (req, res) => {
     });
 });
 
-router.get('/:category_name', (req, res) => {
+router.get('/:category_name', withAuth, (req, res) => {
     Category.findOne({
         where: {
             category_name: req.params.category_name

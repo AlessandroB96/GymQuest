@@ -1,18 +1,20 @@
-<h1>
+<h1 class="category-name">
     {{ category.category_name }}
 </h1>
 
 {{!-- {{> add-post}} For a later date --}}
 
 {{#if category.workouts.length}}
-<section>
-    <h2>{{ category.category_name }} Workouts</h2>
-    <ol>
-        {{#each category.workouts as |workout|}}
-        <li>
-            {{> post-info workout}}
-        </li>
-        {{/each}}
-    </ol>
-</section>
+
+<div class="rows">
+    {{#each category.workouts as |workout|}}
+        <div class="column">
+            <div class="card">
+                {{!-- <h2>{{ category.category_name }} Workouts</h2> --}}
+                 {{> post-info workout}}
+            </div>
+        </div>
+    {{/each}}
+</div>
+
 {{/if}}
