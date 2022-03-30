@@ -2,11 +2,11 @@ body, html {
     position: relative;
     text-align: center;
     background: #5895AF;
-    background-image: url("../assets/runningman.svg");
-    background-repeat: no-repeat;
-    background-size: 550px;
-    background-position: left;
-    background-position-y: 50px;
+    background-image: url("../assets/runningman.svg"), url("../assets/runningwoman2.svg");
+    background-repeat: no-repeat, no-repeat;
+    background-size: 550px, 785px;
+    background-position: left, bottom right;
+    background-position-y: 50px, 10px;
 }
 .wrapper {
     position: relative;
@@ -25,6 +25,11 @@ body, html {
     color: #324144;
     text-shadow: 1px 2px #FF6C75;
     
+}
+
+.logo:hover {
+    text-decoration: none;
+    color: black;
 }
 
 .login-form {
@@ -73,6 +78,7 @@ body, html {
     background: #FFFFFF;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border: none;
+    border-radius: 5px;
 }
 
 .usertext1, .usertext2, .passwordtext1, .passwordtext2, .emailtext {
@@ -206,22 +212,23 @@ body, html {
     margin-top: 50px;
     align-items: center;
     border-radius: 10px;
-    
 }
 
 .info-container {
-    flex:40%;
-    margin-left:40px;
+    flex:20%;
+    margin-left:120px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
 }
 
 .emptydiv {
-    flex: 5%
+    flex: 5%;
+    width: 100px;
+    height: 100px;
 }
 
 .comment-container {
-    flex: 40%;
+    flex: 25%;
     margin-right: 35px;
 
 }
@@ -292,11 +299,12 @@ body, html {
 }
 
 .img {
-    border-radius: 5px;
+    border-radius: 10px;
     max-width: 220px;
     max-height: 230px;
     min-height: 200px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border: 2px solid #FF6C75 ;
 }
 
 .rows {
@@ -342,6 +350,10 @@ body, html {
     font-family: 'IBM Plex Sans Arabic', sans-serif;
     font-weight: bolder;
     margin-top: 35px;
+}
+
+.wizard {
+    background-image: url('../assets/wizard.svg');
 }
 
 /*MEDIA QUERIES*/
