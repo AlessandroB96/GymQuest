@@ -1,0 +1,392 @@
+body, html {
+    position: relative;
+    text-align: center;
+    background: #5895AF;
+    background-image: url("../assets/runningman.svg"), url("../assets/runningwoman2.svg");
+    background-repeat: no-repeat, no-repeat;
+    background-size: 550px, 785px;
+    background-position: left, bottom right;
+    background-position-y: 50px, 10px;
+}
+.wrapper {
+    position: relative;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.logo {
+    position: relative;
+    font-family: 'Pacifico', cursive;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 84px;
+    letter-spacing: -0.015em;
+    color: #324144;
+    text-shadow: 1px 2px #FF6C75;
+    
+}
+
+.logo:hover {
+    text-decoration: none;
+    color: black;
+}
+
+.login-form {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 40px auto auto auto;
+    width: 308px;
+    height: 296px;
+    background: #B3CFE9;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 9px;
+}
+
+.login {
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
+    font-size: 20px;
+    font-weight: bolder; 
+}
+
+.login:hover {
+    text-decoration: none;
+    color: #FF6C75;
+    
+}
+
+.signup-form {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 40px auto auto auto;
+    width: 308px;
+    height: 360px;
+    background: #B3CFE9;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 9px; 
+}
+
+#username-login, #password-login, #username-signup, #email-signup, #password-signup {
+    position: relative;
+    align-items: center;
+    width: 273px;
+    height: 37px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border: none;
+    border-radius: 5px;
+}
+
+.usertext1, .usertext2, .passwordtext1, .passwordtext2, .emailtext {
+    display: flex;
+    align-items: flex-start;
+    padding-left: 16px;
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.loginbtn, .submitbtn {
+    position: relative;
+    align-items: center;
+    width: 111px;
+    height: 37px;
+    background: #FF6C75;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+}
+
+.loginbtn:hover {
+    color: white;
+}
+.btn-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 15px;
+}
+
+#logout {
+    width: 111px;
+    height: 37px;
+    background: #FF6C75;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border: none;
+    margin-top: 15px;
+    border-radius: 5px;
+}
+
+#logout:hover, .addcomment-btn:hover {
+    background: #ff6c76a4;
+    color: white;
+} 
+
+.signup-footer {
+    display: relative;
+    align-items: center;
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 50px;
+}
+
+.welcome {
+    display: flex;
+    justify-content: center;
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
+    font-size: 25px;
+    margin-top: 60px;
+    font-weight: bold;
+}
+
+.signup, a {
+    position: relative;
+    text-align: center;
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bolder;
+    color: black;
+}
+
+.signup:hover {
+    font-weight: bolder;
+    text-decoration: none;
+    color: #FF6C75;
+}
+
+.instruct {
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
+    font-size: 25px;
+    margin: 40px auto 40px auto;
+    font-weight: bold;
+}
+
+.category-container {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    background: #B3CFE9;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 9px;
+    width: 308px;
+    height: 400px;
+}
+
+.categories {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.category-btn {
+    position: relative;
+    align-items: center;
+    width: 275px;
+    height: 37px;
+    background: #FF6C75;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+}
+
+.category-btn:hover {
+    background: #ff6c768c;
+    color: white;
+}
+
+.comment-border {
+    display: flex;
+    margin-top: 50px;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.info-container {
+    flex:20%;
+    margin-left:120px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+}
+
+.emptydiv {
+    flex: 5%;
+    width: 100px;
+    height: 100px;
+}
+
+.comment-container {
+    flex: 25%;
+    margin-right: 35px;
+
+}
+
+.inner-info {
+    background: #B3CFE9;
+    border-radius: 10px;
+    padding: 20px;
+
+}
+
+.inner-container {
+    background: #B3CFE9;
+    border-radius: 10px;
+    width: 100%;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    padding: 20px;
+    height: 620px;
+    overflow-y: auto;
+}
+
+.comment {
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
+    line-height: 1.6;
+    text-align: left;
+    padding: 5px;
+}
+
+.comment:nth-child(odd) {
+    background-color: #9cb4cabc;
+    border-radius: 5px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.addcomment-btn {
+    position: relative;
+    align-items: center;
+    width: 300px;
+    height: 37px;
+    background: #FF6C75;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+}
+
+.comment-input {
+    background: white;
+    resize: none;
+    border: none;
+    border-radius: 5px;
+    height: 90px;
+    width: 300px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.user {
+    font-size: 22px;
+    font-weight: bolder;
+}
+
+.text {
+    font-size: 18px;
+}
+
+.img {
+    border-radius: 10px;
+    max-width: 220px;
+    max-height: 230px;
+    min-height: 200px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border: 2px solid #FF6C75 ;
+}
+
+.rows {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: auto 200px auto 200px;
+}
+
+.column {
+    padding: 0 10px;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 40px;
+    background-color: #B3CFE9;
+    border: 2px solid #FF6C75;
+    border-radius: 20px;
+    width: 350px;
+    height: 350px;
+    align-items: center;
+    margin-bottom: 20px;
+
+}
+
+
+.workout-link:hover {
+    text-decoration: none;
+}
+
+.workout-title {
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
+    font-weight: bolder;
+    font-size: 25px;
+}
+
+.category-name {
+    font-size: 60px;
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
+    font-weight: bolder;
+    margin-top: 35px;
+}
+
+.wizard {
+    background-image: url('../assets/wizard.svg');
+}
+
+/*MEDIA QUERIES*/
+
+@media screen and (max-width: 700px) {
+   
+    .comment-border {
+        display: flex;
+        flex-direction: column;  
+    }
+
+    .info-container {
+        margin: auto auto 40px auto;
+    }
+
+    .comment-container {
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+    }
+
+    .inner-container {
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+    }
+
+    .welcome {
+        display: flex;
+        justify-content: center;
+        font-family: 'IBM Plex Sans Arabic', sans-serif;
+        font-size: 26px;
+        margin-top: 60px;
+        font-weight: bolder;
+    }
+}

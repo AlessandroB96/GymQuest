@@ -1,11 +1,14 @@
 <article class="post">
     <div class="title">
-        <h1>{{title}}</h1>
-            <a href="{{post_url}}" target="_blank"><span>({{format_url post_url}})</span></a>
+        <a class="workout-link" href="/dashboard/workout/{{workout_name}}">
+            <h1 class="workout-title">{{workout_name}}</h1>
+        </a>
     </div>
     <div class="meta">
-        Posted by {{user.username}} on {{format_date created_at}}
-
-        <a href="/post/{{id}}">{{comments.length}} {{format_plural "comment" comments.length}}</a>
+        <a href="{{workout_url}}" target="_blank">
+        <img class="img" src="/assets/images/{{workout_image}}.jpg" alt={{workout_name}}>
+        {{!-- Posted by {{user.username}} on {{format_date created_at}} --}}
+</a>
+        {{!-- <a href="/dashboard/workout/{{workout_name}}">{{comments.length}} {{format_plural "comment" comments.length}}</a> --}}
     </div>
 </article>
