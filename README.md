@@ -6,11 +6,11 @@
   * [Description](#description)
   * [Installation](#installation)
   * [Usage](#usage)
-  * [Licenses](#licenses)
   * [Contributing](#contributing)
-  * [Tests](#tests)
+  * [Images](#images)
   * [Questions](#questions)
   * [Credits](#credits)
+
   
   ## Description
   A fitness app created for those looking to start or add to their workout routines. Users are allowed to signup and login to use the site features such as workout categories, which are categorized by muscle group with a multitude of workouts available for each group. Users are also encouraged to comment on each workout. 
@@ -23,14 +23,20 @@
   ## Usage
   Fairly simple workout website with a signup/login form as well as workout categories. User can navigate through the categories and post comments to said categories. 
 
-  ## Licenses
-    This project is covered under the MIT license. To learn more about what this means, click the license button at the top.
-
+  
   ## Contributing
   Others can contribute by simply emailing any of the key contributors to the project and putting up any issues to the repo. 
 
-  ## Tests
-  N/A
+
+
+  ## Images 
+  ![alt text](READMe_Images/landingpage.jpeg)
+
+  ![alt text](READMe_Images/categories.png)
+  
+  ![alt text](READMe_Images/armspage.jpeg)
+  
+  ![alt text](READMe_Images/commentpage.jpeg)
 
   ## Questions
   Have questions about this projet?
