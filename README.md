@@ -9,8 +9,10 @@
   * [Licenses](#licenses)
   * [Contributing](#contributing)
   * [Tests](#tests)
+  * [Images](#images)
   * [Questions](#questions)
   * [Credits](#credits)
+
   
   ## Description
   A fitness app created for those looking to start or add to their workout routines. Users are allowed to signup and login to use the site features such as workout categories, which are categorized by muscle group with a multitude of workouts available for each group. Users are also encouraged to comment on each workout. 
@@ -32,6 +34,11 @@
   ## Tests
   N/A
 
+  ## Images 
+  ![alt text](READMe Images\landingpage.jpeg)
+  ![alt text](READMe Images\categories.png)
+  ![alt text](READMe Images\armspage.jpeg)
+  ![alt text](READMe Images\commentpage.jpeg)
   ## Questions
   Have questions about this projet?
   GitHub: https://github.com/AlessandroB96/GymQuest, AlessandroB96, ajmarrocco, GeneHackerman
