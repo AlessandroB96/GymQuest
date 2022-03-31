@@ -2,6 +2,7 @@
   
   ## Table of Contents
   * [Description](#description)
+  * [Technologies](#technologies)
   * [Installation](#installation)
   * [Usage](#usage)
   * [Contributing](#contributing)
@@ -14,6 +15,22 @@
   A fitness app created for those looking to start or add to their workout routines. Users are allowed to signup and login to use the site features such as workout categories, which are categorized by muscle group with a multitude of workouts available for each group. Users are also encouraged to comment on each workout. 
   
   https://gym-quest.herokuapp.com/
+
+  ## Technologies
+* Express.js
+* APIs
+* Heroku
+* HTML
+* CSS
+* JavaScript
+* MySQL
+* Handlebars
+* Sequelize
+* Dotenv
+* Bcrypt
+* Express session
+* RESTful APIs
+* Date-fns
 
   ## Installation
   Clone the repository to your local machine and then install the following packages: express-handlebars, MySQL2, Sequelize, dotenv package, bcrypt package(this will hash the passwords), express-session connect-session-sequelize(this adds authentication). Source the schema.sql file via MySQL on the command line, then npm run seed, npm start(to run the server to port 3001), then open localhost:3001 in your browser. 
