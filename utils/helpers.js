@@ -1,13 +1,12 @@
+// Declare date-fns
 const fns = require('date-fns')
 
 module.exports = {
+    // formats dates
     format_date: date => {
         return `${fns.format(new Date(date), 'MM/dd/yyyy')}`;
-    // format_date: date => {
-    //     return `${new Date(date).getMonth() + 1}/${new Date(date).getDate()}/${new Date(
-    //         date
-    //     ).getFullYear()}`;
     },
+    // format url
     format_url: url => {
         return url
             .replace('http://', '')
@@ -16,6 +15,7 @@ module.exports = {
             .split('/')[0]
             .split('?')[0];
     },
+    // pluralize words
     format_plural: (word, amount) => {
         if (amount !== 1) {
             return `${word}s`;

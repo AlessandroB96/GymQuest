@@ -1,17 +1,18 @@
+// comment form handler
 async function commentFormHandler(event) {
     event.preventDefault();
-
+    // declare variables
     const comment_text = document.querySelector('textarea[name="comment-body"]').value.trim();
-
+    // gets workout name from URL and store as workout_id
     let workout_id = window.location.toString().split('/')[
         window.location.toString().split('/').length - 1  
     ];
-
+    // if statements to determine which assigns the workout_id the correct number
     if (workout_id === 'Tricep%20Extensions') {
-         workout_id = 1;
+        workout_id = 1;
     }
     if (workout_id === 'Seated%20Overhead%20Press') {
-         workout_id = 2;
+        workout_id = 2;
     }
     if (workout_id === 'Tricep%20Press%20Down') {
         workout_id = 3;
@@ -113,7 +114,7 @@ async function commentFormHandler(event) {
         workout_id = 35;
     }
 
-    console.log(workout_id);
+    // if there is text inside textarea
     if (comment_text) {
         const response = await fetch('/api/comments', {
             method: 'POST',
@@ -133,5 +134,5 @@ async function commentFormHandler(event) {
         }
     }
 }
-
+// event listener for button
 document.querySelector('.comment-form').addEventListener('submit', commentFormHandler);
