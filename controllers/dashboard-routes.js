@@ -2,6 +2,9 @@ const router = require('express').Router();
 const { Category, Workout, Comment, User } = require('../models');
 const withAuth = require('../utils/auth');
 
+
+//get all categories for dashboard
+
 router.get('/', withAuth, (req, res) => {
     Category.findAll({
         attributes: [
@@ -14,12 +17,15 @@ router.get('/', withAuth, (req, res) => {
         const categories = dbCategoryData.map(category => category.get({ plain: true }));
         res.render('dashboard', { categories, loggedIn: true });
     })
+    // error message
     .catch(err => {
         console.log(err);
         res.status(500).json(err);
     });
 });
 
+
+//get routes for each body group
 router.get('/:category_name', withAuth, (req, res) => {
     Category.findOne({
         where: {
@@ -27,8 +33,6 @@ router.get('/:category_name', withAuth, (req, res) => {
         }, 
         attributes: [
             'id',
-            // 'workout_name',
-            // 'workout_url',
             'category_name', 
             'created_at'
         ],
@@ -41,6 +45,7 @@ router.get('/:category_name', withAuth, (req, res) => {
     })
     .then(dbCategoryData => {
         if (dbCategoryData) {
+            // serialize data before passing to template
             const category = dbCategoryData.get({ plain: true });
 
             res.render('category', {
@@ -56,6 +61,8 @@ router.get('/:category_name', withAuth, (req, res) => {
     });
 });
 
+
+//get route: individual workouts
 router.get('/workout/:workout_name', withAuth, (req, res) => {
     Workout.findOne({
         where: {
@@ -66,7 +73,6 @@ router.get('/workout/:workout_name', withAuth, (req, res) => {
             'workout_name',
             'workout_image',
             'workout_url',
-            //'category_name', 
             'created_at'
         ],
             include: [
@@ -86,6 +92,7 @@ router.get('/workout/:workout_name', withAuth, (req, res) => {
     })
     .then(dbWorkoutData => {
         if (dbWorkoutData) {
+            // serialize data before passing to template
             const workout = dbWorkoutData.get({ plain: true });
 
             res.render('single-post', {
@@ -101,16 +108,7 @@ router.get('/workout/:workout_name', withAuth, (req, res) => {
     });
 });
 
-// router.get('/', (req, res) => {
-//     if (req.session.loggedIn) {
-//         res.redirect('dashboard');
-//         return;
-//     }
-    
-//     res.render('dashboard');
-// });
-
-
+// exports routers
 module.exports = router;
 
 

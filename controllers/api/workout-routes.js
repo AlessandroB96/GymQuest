@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const {Workout, Category} = require('../../models');
 
-//get all posts from database 
+//get all workouts from database 
 router.get('/workouts', (req, res) => {
     Workout.findAll({
         attributes: [
@@ -42,7 +42,6 @@ router.get('/workouts/:workout_name', (req, res) => {
             }
         ]
     })
-    //.then(dbPostData => res.json(dbPostData))
     .then(dbPostData => {
         if (!dbPostData) {
             res.status(404).json({ message: 'No post found with this id' });

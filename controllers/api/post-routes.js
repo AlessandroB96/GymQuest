@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const {Post, Comment, User} = require('../../models');
 
+//**TO BE USED FOR FUTURE FEATURE**
 //get all posts from database 
 router.get('/', (req, res) => {
     console.log('================');
@@ -76,7 +77,6 @@ router.get('/:id', (req, res) => {
 
 //POST create a post
 router.post('/', (req, res) => {
-    // expects {title: 'Taskmaster goes public!', post_url: 'https://taskmaster.com/press', user_id: 1}
     Post.create({
         title: req.body.title,
         post_url: req.body.post_url,
