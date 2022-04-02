@@ -34,7 +34,7 @@ app.set('view engine', 'handlebars');
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-//when you have front-end files like images, stylesheets, and js files, its good to have express.js middleware function that can take all of these files and seerves them statically
+//when you have front-end files like images, stylesheets, and js files, its good to have express.js middleware function that can take all of these files and serves them statically
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(routes);

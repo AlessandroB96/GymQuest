@@ -2,7 +2,9 @@ const router = require('express').Router();
 const { Category, Workout, Comment, User } = require('../models');
 const withAuth = require('../utils/auth');
 
-// gets all categories
+
+//get all categories for dashboard
+
 router.get('/', withAuth, (req, res) => {
     Category.findAll({
         attributes: [
@@ -22,7 +24,8 @@ router.get('/', withAuth, (req, res) => {
     });
 });
 
-// gets category by name
+
+//get routes for each body group
 router.get('/:category_name', withAuth, (req, res) => {
     Category.findOne({
         where: {
@@ -58,7 +61,8 @@ router.get('/:category_name', withAuth, (req, res) => {
     });
 });
 
-// gets workout by name
+
+//get route: individual workouts
 router.get('/workout/:workout_name', withAuth, (req, res) => {
     Workout.findOne({
         where: {

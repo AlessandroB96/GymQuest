@@ -1,3 +1,6 @@
+//FOR FUTURE DEVELOPMENT
+//Personal trainers will add posts
+
 // new form handler
 async function newFormHandler(event) {
     event.preventDefault();

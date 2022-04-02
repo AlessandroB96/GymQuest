@@ -14,6 +14,8 @@ Workout.belongsTo(Category, {
     onDelete: 'SET NULL'
 });
 
+//THIS WILL BE USED FOR TRAINERS FEATURE 
+
 // User.hasMany(Workout, {
 //     foreignKey: 'user_id',
 //     onDelete: 'SET NULL'
