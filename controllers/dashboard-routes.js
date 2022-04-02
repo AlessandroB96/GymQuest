@@ -2,6 +2,7 @@ const router = require('express').Router();
 const { Category, Workout, Comment, User } = require('../models');
 const withAuth = require('../utils/auth');
 
+//get all categories for dashboard
 router.get('/', withAuth, (req, res) => {
     Category.findAll({
         attributes: [
