@@ -24,6 +24,9 @@ const categoryData = [
   }
 ];
 
+// bulkcreate will allow the above categories
+// to be inserted onto the page all at once
+
 const seedCategories = () => Category.bulkCreate(categoryData);
 
 module.exports = seedCategories;
