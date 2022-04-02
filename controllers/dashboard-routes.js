@@ -20,6 +20,7 @@ router.get('/', withAuth, (req, res) => {
     });
 });
 
+//get routes for each body group
 router.get('/:category_name', withAuth, (req, res) => {
     Category.findOne({
         where: {
@@ -27,8 +28,6 @@ router.get('/:category_name', withAuth, (req, res) => {
         }, 
         attributes: [
             'id',
-            // 'workout_name',
-            // 'workout_url',
             'category_name', 
             'created_at'
         ],
@@ -56,6 +55,7 @@ router.get('/:category_name', withAuth, (req, res) => {
     });
 });
 
+//get route: individual workouts
 router.get('/workout/:workout_name', withAuth, (req, res) => {
     Workout.findOne({
         where: {
@@ -66,7 +66,6 @@ router.get('/workout/:workout_name', withAuth, (req, res) => {
             'workout_name',
             'workout_image',
             'workout_url',
-            //'category_name', 
             'created_at'
         ],
             include: [
@@ -100,16 +99,6 @@ router.get('/workout/:workout_name', withAuth, (req, res) => {
         res.status(500).json(err);
     });
 });
-
-// router.get('/', (req, res) => {
-//     if (req.session.loggedIn) {
-//         res.redirect('dashboard');
-//         return;
-//     }
-    
-//     res.render('dashboard');
-// });
-
 
 module.exports = router;
 

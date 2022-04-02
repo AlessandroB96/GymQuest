@@ -2,6 +2,7 @@ const router = require('express').Router();
 const { Category } = require('../../models');
 const withAuth = require('../../utils/auth');
 
+//get all categories
 router.get('/', withAuth, (req, res) => {
     Category.findAll({
         attributes: [
