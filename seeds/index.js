@@ -5,6 +5,9 @@ const seedComments = require('./comment-seeds');
 
 const sequelize = require('../config/connection');
 
+// syncs the database with seeded data from the 
+// -seeds.js files within the SEEDS directory
+
 const seedAll = async () => {
   await sequelize.sync({ force: true });
   console.log('\n----- DATABASE SYNCED -----\n');

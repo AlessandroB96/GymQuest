@@ -1,9 +1,10 @@
-const express = require('express');//2
-const routes = require('./controllers');//3
-const path = require('path');//1
-const exphbs = require('express-handlebars');//5
-const session = require('express-session');//4
-const helpers = require('./utils/helpers.js');//6
+// Declare dependencies
+const express = require('express');
+const routes = require('./controllers');
+const path = require('path');
+const exphbs = require('express-handlebars');
+const session = require('express-session');
+const helpers = require('./utils/helpers.js');
 
 const sequelize = require('./config/connection');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
@@ -11,6 +12,7 @@ const SequelizeStore = require('connect-session-sequelize')(session.Store);
 const app = express();
 const PORT = process.env.PORT || 3001;
 
+// Initialize sessions
 const sess = {
   secret: 'Super secret secret',
   cookie: {},
@@ -23,6 +25,7 @@ const sess = {
 
 app.use(session(sess));
 
+// Initialize handlebars
 const hbs = exphbs.create({ helpers });
 
 app.engine('handlebars', hbs.engine);
@@ -36,6 +39,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(routes);
 
+//Starts connection to database and server
 sequelize.sync({ force: false }).then(() => {
     app.listen(PORT, () => console.log(`Now listening on http://localhost:${PORT}`));
   });

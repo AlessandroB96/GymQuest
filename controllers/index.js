@@ -9,7 +9,7 @@ router.use('/', homeRoutes);
 router.use('/dashboard', dashboardRoutes);
 
 
-//if we make an endpoitn request that doesnt exist, 404 err
+//if we make an endpoitn request that doesn't exist, 404 err
 router.use((req, res) => {
     res.status(404).end();
   });
