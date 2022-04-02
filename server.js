@@ -1,6 +1,5 @@
 const express = require('express');//2
 const routes = require('./controllers');//3
-// const seedAll = require('./seeds/index');
 const path = require('path');//1
 const exphbs = require('express-handlebars');//5
 const session = require('express-session');//4
@@ -32,7 +31,7 @@ app.set('view engine', 'handlebars');
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-//when you have front-end files like images, stylesheets, and js files, its good to have express.js middleware function that can take all of these files and seerves them statically
+//when you have front-end files like images, stylesheets, and js files, its good to have express.js middleware function that can take all of these files and serves them statically
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(routes);

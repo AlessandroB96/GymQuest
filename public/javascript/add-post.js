@@ -1,4 +1,5 @@
 //FOR FUTURE DEVELOPMENT
+//Personal trainers will add posts
 
 async function newFormHandler(event) {
     event.preventDefault();
