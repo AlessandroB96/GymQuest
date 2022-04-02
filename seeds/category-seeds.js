@@ -1,5 +1,8 @@
 const { Category } = require('../models');
 
+// seeded categories to be displayed on the 
+// category page upon user login/signup
+
 const categoryData = [
   {
     category_name: 'Arms',

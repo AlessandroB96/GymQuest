@@ -3,6 +3,10 @@ const sequelize = require('../config/connection');
 
 class Workout extends Model {}
 
+// sets up the workout model to associate with index.js
+// the datatypes will define whether by numeric or
+// string
+
 Workout.init(
     {
         id: {
